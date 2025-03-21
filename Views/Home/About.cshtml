@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ArcadiaUniversity.Models.SchoolViewModels.EnrollmentDateGroup>
+
+@{
+    ViewData["Title"] = "Student Body Statistics";
+}
+
+<h2>Student Body Statistics</h2>
+
+<div class="row">
+    <table class="col-md-4">
+        <tr>
+            <th>
+                Enrollment Date
+            </th>
+            <th>
+                Students
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EnrollmentDate)
+                </td>
+                <td>
+                    @item.StudentCount
+                </td>
+            </tr>
+        }
+    </table>
+
+    <div class="col-md-4">
+        <h3>Kattia Contreras</h3>
+        <p>kattbcc17@byui.edu</p>
+    </div>
+</div>
